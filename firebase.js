@@ -10,7 +10,9 @@ const firebaseConfig = {
 };
 
 // as nextjs has server side rendering then in case if app is already initialized
-const app = !firebase.apps.length ? firebase.initializeApp(firebaseConfig) : firebase.app();
+const app = !firebase.apps.length
+    ? firebase.initializeApp(firebaseConfig)
+    : firebase.app();
 
 const db = app.firestore();
 
